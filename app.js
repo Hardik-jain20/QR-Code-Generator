@@ -7,6 +7,11 @@ let generate = document.querySelector("#generate");
 generate.addEventListener("click", () =>{
     generateQR();
 });
+qrText.addEventListener("keydown", function(e) {
+  if (e.key === "Enter") {
+    generate.click();
+  }
+});
 
 function generateQR(){
     if(qrText.value.length > 0){
